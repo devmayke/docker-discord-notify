@@ -12,7 +12,7 @@ This project is a Docker event monitor that sends Discord notifications when con
 ### Cloning and Setup
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/docker-discord-notify.git
+   git clone https://github.com/devmayke/docker-discord-notify.git
    cd docker-discord-notify
    ```
 2. Edit `docker-compose.yml` to add your `DISCORD_WEBHOOK`:
