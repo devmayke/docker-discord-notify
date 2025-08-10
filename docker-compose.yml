@@ -1,0 +1,17 @@
+services:
+  docker-discord-notify:
+    build: .
+    container_name: docker-discord-notify
+    restart: unless-stopped
+    ports:
+      - "3055:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - notify_data:/data
+    environment:
+      DISCORD_WEBHOOK: "https://discord.com/api/webhooks/1403370302712320040/h5c-Xiv3Ix-sh-c7HRnUg0BIPqjPCG4Cq29N7RyWx99Rndo_OG_clEukLIuJBu6l6FRT"
+      TRIGGER_LABEL: "notify"
+      TRIGGER_VALUE: "true"
+volumes:
+  notify_data:
+    driver: local
